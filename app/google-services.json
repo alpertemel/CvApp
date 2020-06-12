@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "246539472122",
+    "firebase_url": "https://cvapp-8ab28.firebaseio.com",
+    "project_id": "cvapp-8ab28",
+    "storage_bucket": "cvapp-8ab28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246539472122:android:c01b83b240f380ecef0d43",
+        "android_client_info": {
+          "package_name": "com.example.cvapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246539472122-63k7v7tiu17t541ji9tb93hsgo5ofe5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF8s70v2QDpsGRl4MYZyvFfO725g1DbdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246539472122-63k7v7tiu17t541ji9tb93hsgo5ofe5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
