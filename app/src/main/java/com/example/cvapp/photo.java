@@ -13,7 +13,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class photo extends AppCompatActivity {
 
-    Button ch, up;
+    Button ch, up,infobtn;
     ImageView img;
     StorageReference mStorageRef;
 
@@ -25,6 +25,19 @@ public class photo extends AppCompatActivity {
         ch=(Button)findViewById(R.id.btnchoose);
         up=(Button)findViewById(R.id.btnupload);
         img=(ImageView) findViewById(R.id.imgview);
+
+        infobtn=(Button) findViewById(R.id.infoBtn);
+        infobtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(photo.this, GeneralInfo.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
         ch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +52,6 @@ public class photo extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/' ");
         intent.setAction((Intent.ACTION_GET_CONTENT));
-        startActivityForResult(intent,requestCode 1);
     }
 
 }
