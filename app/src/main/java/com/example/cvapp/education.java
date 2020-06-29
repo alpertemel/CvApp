@@ -7,48 +7,48 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
-public class GeneralInfo extends AppCompatActivity {
+public class education extends AppCompatActivity {
 
     private Firebase Ref;
-    EditText info;
+    EditText edu;
     Button save,next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_general_info);
+        setContentView(R.layout.activity_education);
 
-        info=(EditText)findViewById(R.id.info);
-        save=(Button) findViewById(R.id.saveBtn);
-        next=(Button) findViewById(R.id.nextBtn);
+        edu=(EditText)findViewById(R.id.education);
+        save=(Button) findViewById(R.id.saveEdu);
+        next=(Button) findViewById(R.id.nextEdu);
 
         Firebase.setAndroidContext(this);
         Ref=new Firebase("https://cvapp-8ab28.firebaseio.com/");
 
-        next = (Button)findViewById(R.id.nextBtn);
+        next = (Button)findViewById(R.id.nextEdu);
         next.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GeneralInfo.this, education.class);
+                Intent intent = new Intent(education.this, work.class);
                 startActivity(intent);
             }
         });
-
     }
+
     public void feedbacksent (View view){
 
-        String infoinput=info.getText().toString();
+        String eduinput=edu.getText().toString();
 
-        Firebase Reinfo=Ref.child("info").push();
-        Reinfo.setValue(infoinput);
+        Firebase ReEdu=Ref.child("Education").push();
+        ReEdu.setValue(eduinput);
 
 
         Toast.makeText(getApplicationContext(),"We Saved Your General Information !",Toast.LENGTH_LONG).show();
     }
+
 }
